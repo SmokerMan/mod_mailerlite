@@ -17,7 +17,7 @@ defined('_JEXEC') or die('(@)|(@)');
 		<input type="text" name="data[name]" placeholder="<?php echo JText::_('MOD_MAILERLITE_NAME'); ?>" />
 	</span>
 	<span class="email">
-		<input type="email" required="required" name="data[email]" placeholder="<?php echo JText::_('MOD_MAILERLITE_EMAIL'); ?>" value="test@test.ru" />
+		<input type="email" required="required" name="data[email]" placeholder="<?php echo JText::_('MOD_MAILERLITE_EMAIL'); ?>" />
 	</span>
 		
 	<button class="button" type="submit">
