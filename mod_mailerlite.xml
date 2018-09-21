@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5" method="upgrade" client="site">
+	<name>mod_mailerlite</name>
+	<author>SmokerMan</author>
+	<creationDate>21.09.2018</creationDate>
+	<copyright>© 2018 All rights reserved.</copyright>
+	<license>GNU/GPL v.3 or later.</license>
+	<authorEmail />
+	<authoreUrl>joomla-code.ru</authoreUrl>
+	<version>1.0</version>
+	<description>MOD_MAILERLITE_XML_DESCRIPTION</description>
+	<scriptfile>install.php</scriptfile>
+	<files>
+		<filename module="mod_mailerlite">mod_mailerlite.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_mailerlite.xml</filename>
+		<filename>install.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.mod_mailerlite.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_mailerlite.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="key" type="text" label="MOD_MAILERLITE_KEY" description="MOD_MAILERLITE_KEY_DESC" />
+				<field name="group_id" type="text" label="MOD_MAILERLITE_GROUP_ID" description="MOD_MAILERLITE_GROUP_ID_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" rows="3" />
+
+				<field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" default="1" filter="integer">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field name="cache_time" type="number" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" default="900" filter="integer" />
+
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
